@@ -1,14 +1,43 @@
-# DSC_140_Final_Project_2024
-### Soccer Analysis and Machine Learning
-As a soccer fan, this project aims to dive deeper in some of the analytics regarding the top 5 European Leagues.
+# Soccer Analysis and Machine Learning – DSC 140
 
-This is done by categorizing and implementing statistical functions on the data set **Football Events** 
-that can be found in Kaggle
+As a soccer fan, this project dives into the analytics behind goal-scoring in Europe’s top 5 leagues using event data from professional matches. The dataset comes from the **Football Events** dataset on Kaggle:
 
-https://www.kaggle.com/datasets/secareanualin/football-events/code
+[Football Events Dataset on Kaggle](https://www.kaggle.com/datasets/secareanualin/football-events)
 
-Followed by the implementation of KNN machine learning as well as a 2 hidden-layer Keras Tensorflow NN 
-to predict the probability of scoring a goal based on the location
-of the shot. 
+## Overview
 
-Due to the volume of the data set, both ML models were run in the OSC cluster. 
+The project focuses on:
+- Cleaning and merging event data with match metadata
+- Analyzing shot outcomes and goal distributions by country and shot placement
+- Visualizing trends using bar charts and pie charts
+- Running statistical tests (Chi-square, Kolmogorov-Smirnov) on shot patterns
+
+## Machine Learning Models
+
+### K-Nearest Neighbors (KNN)
+- Explores accuracy across varying values of *k*
+- Evaluates prediction performance on shot placement vs. goal outcome
+- Uses a confusion matrix for error analysis
+
+### Neural Network (TensorFlow/Keras)
+- Two hidden layers using ReLU and sigmoid activations
+- Predicts goal probability from shot placement data
+- Trained and tested on OSC’s high-performance cluster due to dataset size
+
+## Visualizations
+
+- **Shot Outcome Distribution (Pie Chart)**
+- **Goals vs. No-Goals per Country (Bar Plot)**
+- **Goal Probability by Shot Placement**
+- **Model Accuracy vs. K (KNN)**
+- **Confusion Matrix for KNN Predictions**
+
+##  Tools Used
+
+- `pandas`, `numpy`
+- `matplotlib`, `seaborn`
+- `scikit-learn` (KNN, accuracy, confusion matrix)
+- `tensorflow.keras` (Neural Network)
+- `scipy.stats` (Chi-square, KS test)
+
+>  **Note:** Paths to the dataset will need to be updated based on your local system.
